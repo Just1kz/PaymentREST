@@ -1,0 +1,23 @@
+<html>
+<body>
+<div>
+<a href="/main" >Main page</a>
+</div>
+<div>Список счетов</div>
+<div>
+    <form method="post">
+        <input type="text" name="requisite" placeholder="Введите реквизиты" />
+        <input type="text" name="currency" placeholder="Рубли/Евро/Доллары">
+        <input type="text" name="balance" placeholder="Баланс">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+{{#accounts}}
+    <div>
+    <a>{{requisite}}</a>
+    <c>{{currency}}</c>
+    <d>{{balance}}</d>
+    </div>
+{{/accounts}}
+</body>
+</html>

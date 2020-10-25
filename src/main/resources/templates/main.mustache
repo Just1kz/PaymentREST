@@ -1,0 +1,59 @@
+<html>
+
+<body>
+
+<div> Список счетов</div>
+<a href="/accounts" >accounts page</a>
+<b>
+
+</b>
+<div>
+
+
+
+
+</div>
+
+<div>Введите реквизиты платежа:</div>
+<div>
+    <form method="post">
+        <input type="text" name="ascAccountRequisite" placeholder="Счёт зачисления"/>
+       <input type="text" name="dscAccountRequisite" placeholder="Счёт списания"/>
+        <input type="text" name="phone" placeholder="Номер телефона"/>
+        <input type="text" name="currency" placeholder="Рубли/Евро/Доллары"/>
+        <input type="text" name="amount" placeholder="Сумма платежа"/>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div>
+    <form method="post" action="pay">
+        <input type="text" name="pay">
+        <button type="submit">Оплатить</button>
+    </form>
+</div>
+<div>Счета:</div>
+{{#accounts}}
+    <div>
+        <a>{{requisite}}</a>
+        <c>{{currency}}</c>
+        <d>{{balance}}</d>
+    </div>
+{{/accounts}}
+<div>
+
+</div>
+<div>Платежи:</div>
+{{#payments}}
+    <div>
+    <a>{{id}}</a>
+    <d>{{date}}</d>
+    <e>{{phone}}</e>
+    <f>{{currency}}</f>
+    <da>{{amount}}</da>
+        <e>{{ascAccount}}</e>
+        <z>{{dscAccount}}</z>
+    <e>{{statusPayment}}</e>
+    </div>
+{{/payments}}
+</body>
+</html>
